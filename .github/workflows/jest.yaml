@@ -15,3 +15,23 @@ jobs:
           node-version: 18
       - name: check yarn version
         run: yarn --version
+
+      - name: build backend
+        run: yarn
+        working-directory: backend
+
+      - name: run backend test
+        run: yarn test
+        working-directory: backend
+        fail_on_error: true
+
+      - name: build infrastructure
+        run: yarn
+        working-directory: infrastructure
+
+      - name: run infrastructure test
+        run: yarn test
+        working-directory: infrastructure
+        fail_on_error: true
+
+
