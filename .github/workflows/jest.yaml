@@ -24,7 +24,6 @@ jobs:
       - name: run backend test
         run: yarn test
         working-directory: backend
-        fail_on_error: true
 
       - name: build infrastructure
         run: yarn
@@ -33,6 +32,5 @@ jobs:
       - name: run infrastructure test
         run: yarn test
         working-directory: infrastructure
-        fail_on_error: true
 
 
